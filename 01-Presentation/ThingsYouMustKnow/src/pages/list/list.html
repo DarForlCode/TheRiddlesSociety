@@ -1,32 +1,33 @@
-<ion-header>
-  <ion-navbar>
+<ion-header >
+  <ion-navbar color='primary'>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
+    </button>  
+    <ion-searchbar
+      showCancelButton="true">
+    </ion-searchbar>
   </ion-navbar>
 </ion-header>
 
-  <ion-content>
-      <ion-list>
-        <div ion-item *ngFor="let item of items">
-            <div class="card" >
-                <p class="item item-text-wrap" >Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-                <ion-item>
-                  <h1>Marty McFly</h1>
-                  <p >November 5, 1955</p>
-                </ion-item>        
-                <img src="https://www.loftattitude.com/8284-thickbox_default/lampe-bonhomme-articulee-en-bois.jpg">       
-                <ion-card-content>
-                  
-                </ion-card-content>
-                <ion-row>
-                  <ion-col  >
-                      <button ion-button outline>Read more</button>
-                  </ion-col>
-                </ion-row> 
-            </div>
-        </div>
-          
-      </ion-list>
-  </ion-content>
+<ion-content>
+    <ion-card  *ngFor="let item of items">
+        <ion-item color="light">
+          <h2>{{item.title}}</h2>
+          <p>{{item.date}}</p>
+        </ion-item>        
+        <img src="{{item.image}}">       
+        <ion-card-content>
+          <p class="item item-text-wrap"  >{{item.text}}</p>
+        </ion-card-content>
+        <ion-row >
+          <ion-col  >
+              <button ion-button color="primary"  >Read more ...</button>    
+          </ion-col>
+        </ion-row> 
+    </ion-card>      
+</ion-content>
+<ion-footer>
+    <ion-toolbar color="primary">
+        <ion-title>Subheader</ion-title>
+      </ion-toolbar>
+</ion-footer>
