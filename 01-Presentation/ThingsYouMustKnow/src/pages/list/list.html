@@ -13,7 +13,7 @@
     <div *ngFor="let item of items">
         <ion-card  (click)="detail(item)"  >
             <ion-item color="light">
-              <h2  ion-text text-wrap  color="dark">{{item.title}}</h2>
+              <h2  ion-text text-wrap  color="dark" style="font-weight: 500;">{{item.title}}</h2>
               <p ion-text>{{item.date}}</p>
             </ion-item>        
             <img src="{{item.image}}">       
