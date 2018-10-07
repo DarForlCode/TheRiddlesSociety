@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { DetailPage } from '../detail/detail';
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
 })
 export class ListPage {
   items: Array<{title: string, date: string, image: string,text: string}>;
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items = [];
     this.items.push({
@@ -24,5 +23,8 @@ export class ListPage {
       text :"If a font has a wide selection of weight, a large x-height and can scale well then, it’s likely that it’ll work well in most layouts, context permitting.When deciding on typography in a project, your user’s needs should be at the forefront of your mind. After all, it is your users who you’re designing for. If you’ve designed a mobile app focused on learning, then you’ll have to choose a font to reflect that. Something flexible and functional. Style over substance. And just because you like a font, doesn’t mean it’s going to work for others."
     }
   );
+  }
+  detail(item){
+    this.navCtrl.push(DetailPage,item);
   }
 }

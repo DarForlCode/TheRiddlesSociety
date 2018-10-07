@@ -4,14 +4,15 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { ListPage } from '../pages/list/list';
-
+import { DetailPage } from '../pages/detail/detail';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
     MyApp,
-    ListPage
+    ListPage,
+    DetailPage
   ],
   imports: [
     BrowserModule,
@@ -20,12 +21,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ListPage
+    ListPage,
+    DetailPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ] 
 })
 export class AppModule {}
