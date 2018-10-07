@@ -3,13 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="../../03-DataAccess/DataAccess/DataAccess.csproj" />
+  </ItemGroup>
 </Project>
